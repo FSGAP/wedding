@@ -24,6 +24,16 @@
     <link rel="manifest" href="manifest.json">
     <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
 
+    <style>
+        /* Адаптация для телефонов */
+        @media (max-width: 768px) {
+            .hero-img {
+                object-fit: contain !important;
+                background-color: #000;
+            }
+        }
+    </style>
+
     <script>
         function loadCssFromCDN(css) {
             const link = document.createElement('link');
@@ -58,9 +68,9 @@
 <body id="top">
 <section class="hero" style="min-height: 100vh; position: relative; display: flex; align-items: center; justify-content: center; background-color: #000; overflow: hidden;">
 
-    <!-- Фоновое фото (одно для всех) -->
+    <!-- Фоновое фото -->
     <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;">
-        <img src="img/hero.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        <img class="hero-img" src="img/hero.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;">
     </div>
 
     <!-- Шторка -->
@@ -71,14 +81,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <!-- Имена -->
                     <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 8px 15px; margin-top: 80px;">
                         <span style="font-family: Georgia, serif; font-size: clamp(32px, 8vw, 64px); font-weight: 700; color: #ffffff; letter-spacing: 2px;">Дарья</span>
                         <span style="font-family: Georgia, serif; font-size: clamp(24px, 5vw, 40px); color: #ffffff;">❤</span>
                         <span style="font-family: Georgia, serif; font-size: clamp(32px, 8vw, 64px); font-weight: 700; color: #ffffff; letter-spacing: 2px;">Евгений</span>
                     </div>
-                    
-                    <!-- Дата (увеличена) -->
                     <div style="font-family: Arial, sans-serif; font-size: clamp(18px, 4vw, 32px); color: #ffffff; letter-spacing: 4px; margin-top: 15px; font-weight: 700;">
                         11 СЕНТЯБРЯ 2026
                     </div>
