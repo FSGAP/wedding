@@ -58,10 +58,10 @@
 <body id="top">
 <section class="hero" style="min-height: 100vh; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; background: #000;">
     <!-- Фоновое фото -->
-    <img src="img/hero-min.jpg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; min-height: 100vh;">
+    <img src="img/hero-min.jpg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;">
     
-    <!-- Шторка -->
-    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.45); z-index: 1; min-height: 100vh;"></div>
+    <!-- Шторка — полупрозрачная, чтобы фото было видно -->
+    <div style="position: absolute; inset: 0; background: rgba(0,0,0,0.35); z-index: 1;"></div>
     
     <!-- Контент -->
     <div style="position: relative; z-index: 2; width: 100%; min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between;">
