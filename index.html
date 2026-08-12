@@ -24,6 +24,17 @@
     <link rel="manifest" href="manifest.json">
     <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
 
+    <style>
+        /* Адаптация для мобильных */
+        @media (max-width: 768px) {
+            .hero-bg {
+                background-image: url('img/hero-mobile.jpg') !important;
+                background-size: cover !important;
+                background-position: center !important;
+            }
+        }
+    </style>
+
     <script>
         function loadCssFromCDN(css) {
             const link = document.createElement('link');
@@ -58,12 +69,8 @@
 <body id="top">
 <section class="hero" style="min-height: 100vh; position: relative; display: flex; align-items: center; justify-content: center; background-color: #000; overflow: hidden;">
 
-    <!-- Фоновое фото (разное для десктопа и мобильных) -->
-    <picture>
-        <source media="(max-width: 768px)" srcset="img/hero-mobile.jpg">
-        <source media="(min-width: 769px)" srcset="img/hero-desktop.jpg">
-        <img src="img/hero-desktop.jpg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;">
-    </picture>
+    <!-- Фоновое фото для десктопа (по умолчанию) -->
+    <div class="hero-bg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; background-image: url('img/hero-desktop.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
 
     <!-- Шторка -->
     <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.45); z-index: 1;"></div>
