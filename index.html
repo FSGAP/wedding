@@ -58,10 +58,12 @@
 <body id="top">
 <section class="hero" style="min-height: 100vh; position: relative; display: flex; align-items: center; justify-content: center; background-color: #000; overflow: hidden;">
 
-    <!-- Фоновое фото (заполняет весь экран) -->
-    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;">
+    <!-- Фоновое фото: разное для десктопа и мобильных -->
+    <picture style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;">
+        <source media="(max-width: 768px)" srcset="img/hero-mobile-min.jpg">
+        <source media="(min-width: 769px)" srcset="img/hero-desktop.jpg">
         <img src="img/hero-desktop.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-    </div>
+    </picture>
 
     <!-- Шторка -->
     <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.45); z-index: 1;"></div>
