@@ -56,61 +56,64 @@
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
 <body id="top">
-<section class="hero" style="background-image: url('img/hero-min.jpg'); background-size: cover; background-position: center; background-attachment: fixed; min-height: 100vh;">
-    <section class="navigation">
-        <header>
-            <div class="header-content">
-                <!-- Логотип слева -->
-                <div class="logo" style="display: flex; justify-content: flex-start; align-items: center; width: 100%;">
-                    <a href="#" style="display: inline-block; text-align: left;">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120" width="140" height="80" style="display: block; margin-right: auto;">
-                            <text x="70" y="45" font-family="Georgia, serif" font-size="48" font-weight="700" fill="#ffffff" text-anchor="middle">Д</text>
-                            <text x="110" y="45" font-family="Georgia, serif" font-size="48" font-weight="700" fill="#f0c0c0" text-anchor="middle">+</text>
-                            <text x="150" y="45" font-family="Georgia, serif" font-size="48" font-weight="700" fill="#ffffff" text-anchor="middle">Е</text>
-                            <line x1="35" y1="65" x2="165" y2="65" stroke="#ffffff" stroke-width="2"/>
-                            <text x="100" y="92" font-family="Georgia, serif" font-size="28" font-weight="700" fill="#ffffff" text-anchor="middle">2026</text>
+<section class="hero" style="min-height: 100vh; position: relative; overflow: hidden;">
+    <!-- Фоновое фото через тег img с object-fit: cover -->
+    <img src="img/hero-min.jpg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;">
+    <div style="position: relative; z-index: 1; background: rgba(0,0,0,0.3); min-height: 100vh; display: flex; flex-direction: column; justify-content: center;">
+        <section class="navigation">
+            <header>
+                <div class="header-content">
+                    <div class="logo" style="display: flex; justify-content: flex-start; align-items: center; width: 100%;">
+                        <a href="#" style="display: inline-block; text-align: left;">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120" width="140" height="80" style="display: block; margin-right: auto;">
+                                <text x="70" y="45" font-family="Georgia, serif" font-size="48" font-weight="700" fill="#ffffff" text-anchor="middle">Д</text>
+                                <text x="110" y="45" font-family="Georgia, serif" font-size="48" font-weight="700" fill="#f0c0c0" text-anchor="middle">+</text>
+                                <text x="150" y="45" font-family="Georgia, serif" font-size="48" font-weight="700" fill="#ffffff" text-anchor="middle">Е</text>
+                                <line x1="35" y1="65" x2="165" y2="65" stroke="#ffffff" stroke-width="2"/>
+                                <text x="100" y="92" font-family="Georgia, serif" font-size="28" font-weight="700" fill="#ffffff" text-anchor="middle">2026</text>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="header-nav">
+                        <nav>
+                            <ul class="primary-nav" style="font-weight: 700;">
+                                <li><a href="#events">Программа</a></li>
+                                <li><a href="#map">Место</a></li>
+                                <li><a href="#instagram">Instagram</a></li>
+                            </ul>
+                            <ul class="member-actions">
+                                <li><a href="#rsvp" class="btn-white btn-small">RSVP</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="navicon">
+                        <a class="nav-toggle" href="#"><span></span></a>
+                    </div>
+                </div>
+            </header>
+        </section>
+        <div class="container" style="flex: 1; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+            <div class="row" style="width: 100%;">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="hero-content text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 250" width="600" height="200" style="max-width: 100%;">
+                            <text x="350" y="80" font-family="Georgia, serif" font-size="56" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="4">Дарья</text>
+                            <text x="350" y="130" font-family="Georgia, serif" font-size="36" fill="#ffffff" text-anchor="middle">❤</text>
+                            <text x="350" y="180" font-family="Georgia, serif" font-size="56" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="4">Евгений</text>
+                            <line x1="150" y1="205" x2="550" y2="205" stroke="#ffffff" stroke-width="2"/>
+                            <text x="350" y="240" font-family="Arial, sans-serif" font-size="18" fill="#ffffff" text-anchor="middle" letter-spacing="6">11 СЕНТЯБРЯ 2026</text>
                         </svg>
-                    </a>
-                </div>
-                <div class="header-nav">
-                    <nav>
-                        <ul class="primary-nav" style="font-weight: 700;">
-                            <li><a href="#events">Программа</a></li>
-                            <li><a href="#map">Место</a></li>
-                            <li><a href="#instagram">Instagram</a></li>
-                        </ul>
-                        <ul class="member-actions">
-                            <li><a href="#rsvp" class="btn-white btn-small">RSVP</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="navicon">
-                    <a class="nav-toggle" href="#"><span></span></a>
+                    </div>
                 </div>
             </div>
-        </header>
-    </section>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="hero-content text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 250" width="600" height="200" style="max-width: 100%;">
-                        <text x="350" y="80" font-family="Georgia, serif" font-size="56" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="4">Дарья</text>
-                        <text x="350" y="130" font-family="Georgia, serif" font-size="36" fill="#ffffff" text-anchor="middle">❤</text>
-                        <text x="350" y="180" font-family="Georgia, serif" font-size="56" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="4">Евгений</text>
-                        <line x1="150" y1="205" x2="550" y2="205" stroke="#ffffff" stroke-width="2"/>
-                        <text x="350" y="240" font-family="Arial, sans-serif" font-size="18" fill="#ffffff" text-anchor="middle" letter-spacing="6">11 СЕНТЯБРЯ 2026</text>
-                    </svg>
-                </div>
+            <div class="row" style="width: 100%;">
+                <div class="col-sm-4 hidden-xs"></div>
+                <div class="col-sm-4 hidden-xs text-center"><a href="#rsvp" class="btn btn-accent btn-large rsvp-btn">RSVP</a></div>
+                <div class="col-sm-4 hidden-xs"></div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-sm-4 hidden-xs"></div>
-            <div class="col-sm-4 hidden-xs text-center"><a href="#rsvp" class="btn btn-accent btn-large rsvp-btn">RSVP</a></div>
-            <div class="col-sm-4 hidden-xs"></div>
-        </div>
+        <div class="down-arrow floating-arrow"><a href="#invitation"><i class="fa fa-angle-down"></i></a></div>
     </div>
-    <div class="down-arrow floating-arrow"><a href="#invitation"><i class="fa fa-angle-down"></i></a></div>
 </section>
 
 <section id="invitation" class="section-padding">
@@ -190,7 +193,7 @@
         </div>
         <div class="row section-border wp7">
             <div class="col-md-4 col-md-offset-4">
-                <img src="img/iphone_instagram.jpg" style="width: 100%; height: auto; object-fit: contain; border-radius: 10px;">
+                <img src="img/iphone_instagram.jpg" style="width: 100%; height: auto; max-height: 400px; object-fit: contain; border-radius: 10px;">
             </div>
         </div>
     </div>
