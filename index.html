@@ -58,14 +58,15 @@
 <body id="top">
 <section class="hero" style="min-height: 100vh; display: flex; flex-direction: column; background: #000;">
 
-    <!-- Шторка (верхний блок) -->
-    <div style="background: rgba(0,0,0,0.6); padding: 20px 0; z-index: 2; position: relative;">
-        <div class="container" style="display: flex; justify-content: center; align-items: center; flex-direction: column; min-height: 40vh;">
+    <!-- Шторка (верхний блок) — горизонтальное выравнивание -->
+    <div style="background: rgba(0,0,0,0.6); padding: 20px 0; z-index: 2; position: relative; flex-shrink: 0; width: 100%;">
+        <div class="container" style="display: flex; justify-content: center; align-items: center; flex-direction: column; min-height: 30vh; width: 100%;">
             <div class="row" style="width: 100%;">
-                <div class="col-md-12 text-center">
-                    <div style="display: flex; justify-content: center; align-items: center; width: 100%; margin-bottom: 20px;">
+                <div class="col-md-12 text-center" style="width: 100%;">
+                    <!-- Логотип -->
+                    <div style="display: flex; justify-content: center; align-items: center; width: 100%; margin-bottom: 15px; flex-wrap: wrap;">
                         <a href="#" style="display: inline-block; text-align: center;">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120" width="160" height="90" style="display: block; margin: 0 auto;">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120" width="140" height="80" style="display: block; margin: 0 auto;">
                                 <text x="70" y="45" font-family="Georgia, serif" font-size="48" font-weight="700" fill="#ffffff" text-anchor="middle">Д</text>
                                 <text x="110" y="45" font-family="Georgia, serif" font-size="48" font-weight="700" fill="#f0c0c0" text-anchor="middle">+</text>
                                 <text x="150" y="45" font-family="Georgia, serif" font-size="48" font-weight="700" fill="#ffffff" text-anchor="middle">Е</text>
@@ -75,14 +76,19 @@
                         </a>
                     </div>
                     
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 250" width="500" height="160" style="max-width: 100%; margin: 0 auto;">
-                        <text x="350" y="80" font-family="Georgia, serif" font-size="48" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="4">Дарья</text>
-                        <text x="350" y="130" font-family="Georgia, serif" font-size="32" fill="#ffffff" text-anchor="middle">❤</text>
-                        <text x="350" y="180" font-family="Georgia, serif" font-size="48" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="4">Евгений</text>
-                        <line x1="150" y1="200" x2="550" y2="200" stroke="#ffffff" stroke-width="2"/>
-                        <text x="350" y="230" font-family="Arial, sans-serif" font-size="16" fill="#ffffff" text-anchor="middle" letter-spacing="6">11 СЕНТЯБРЯ 2026</text>
-                    </svg>
+                    <!-- Имена в строку -->
+                    <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 10px 20px;">
+                        <span style="font-family: Georgia, serif; font-size: 36px; font-weight: 700; color: #ffffff; letter-spacing: 4px;">Дарья</span>
+                        <span style="font-family: Georgia, serif; font-size: 28px; color: #ffffff;">❤</span>
+                        <span style="font-family: Georgia, serif; font-size: 36px; font-weight: 700; color: #ffffff; letter-spacing: 4px;">Евгений</span>
+                    </div>
                     
+                    <!-- Дата -->
+                    <div style="font-family: Arial, sans-serif; font-size: 16px; color: #ffffff; letter-spacing: 6px; margin-top: 8px;">
+                        11 СЕНТЯБРЯ 2026
+                    </div>
+                    
+                    <!-- Кнопка -->
                     <div style="margin-top: 20px;">
                         <a href="#rsvp" class="btn btn-accent btn-large rsvp-btn" style="background: #c0392b; color: #fff; padding: 12px 30px; border-radius: 30px; text-decoration: none; display: inline-block;">RSVP</a>
                     </div>
@@ -92,12 +98,12 @@
     </div>
 
     <!-- Фото (нижний блок) -->
-    <div style="flex: 1; position: relative; overflow: hidden; min-height: 60vh;">
+    <div style="flex: 1; position: relative; overflow: hidden; min-height: 70vh; width: 100%;">
         <img src="img/hero-min.jpg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;">
     </div>
 
     <!-- Стрелка вниз -->
-    <div class="down-arrow floating-arrow" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 3;">
+    <div class="down-arrow floating-arrow" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 3; color: #fff; font-size: 30px;">
         <a href="#invitation"><i class="fa fa-angle-down" style="color: #fff; font-size: 30px;"></i></a>
     </div>
 </section>
