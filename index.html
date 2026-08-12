@@ -58,29 +58,29 @@
 <body id="top">
 <section class="hero" style="min-height: 100vh; position: relative; display: flex; align-items: center; justify-content: center; background-color: #000; overflow: hidden;">
 
-    <!-- Фоновое фото с размытием (для заполнения полос) -->
-    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;">
-        <img src="img/hero-min.jpg" style="width: 100%; height: 100%; object-fit: cover; filter: blur(8px) brightness(0.6); transform: scale(1.1);">
-    </div>
+    <!-- Фоновое фото (разное для десктопа и мобильных) -->
+    <picture>
+        <source media="(max-width: 768px)" srcset="img/hero-mobile.jpg">
+        <source media="(min-width: 769px)" srcset="img/hero-desktop.jpg">
+        <img src="img/hero-desktop.jpg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;">
+    </picture>
 
-    <!-- Основное фото (без размытия) -->
-    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; display: flex; align-items: center; justify-content: center;">
-        <img src="img/hero-min.jpg" style="width: 100%; height: 100%; object-fit: contain; max-width: 100%; max-height: 100%;">
-    </div>
-    
     <!-- Шторка -->
-    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.45); z-index: 2;"></div>
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.45); z-index: 1;"></div>
     
     <!-- Контент поверх шторки -->
-    <div style="position: relative; z-index: 3; width: 100%; text-align: center; padding: 20px;">
+    <div style="position: relative; z-index: 2; width: 100%; text-align: center; padding: 20px;">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
+                    <!-- Имена -->
                     <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 8px 15px; margin-top: 80px;">
                         <span style="font-family: Georgia, serif; font-size: clamp(32px, 8vw, 64px); font-weight: 700; color: #ffffff; letter-spacing: 2px;">Дарья</span>
                         <span style="font-family: Georgia, serif; font-size: clamp(24px, 5vw, 40px); color: #ffffff;">❤</span>
                         <span style="font-family: Georgia, serif; font-size: clamp(32px, 8vw, 64px); font-weight: 700; color: #ffffff; letter-spacing: 2px;">Евгений</span>
                     </div>
+                    
+                    <!-- Дата -->
                     <div style="font-family: Arial, sans-serif; font-size: clamp(14px, 3vw, 22px); color: #ffffff; letter-spacing: 4px; margin-top: 15px;">
                         11 СЕНТЯБРЯ 2026
                     </div>
@@ -90,7 +90,7 @@
     </div>
     
     <!-- Стрелка вниз -->
-    <div class="down-arrow floating-arrow" style="position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); z-index: 4;">
+    <div class="down-arrow floating-arrow" style="position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); z-index: 3;">
         <a href="#invitation"><i class="fa fa-angle-down" style="color: #fff; font-size: clamp(28px, 4vw, 40px);"></i></a>
     </div>
 </section>
