@@ -58,11 +58,11 @@
 <body id="top">
 <section class="hero" style="background-image: url('img/hero-min.jpg'); background-size: cover; background-position: center; background-attachment: fixed; min-height: 100vh; position: relative; display: flex; align-items: center; justify-content: center;">
 
-    <!-- Шторка на весь экран -->
-    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.45); z-index: 1;"></div>
+    <!-- Шторка фиксированная — сопровождает при скролле -->
+    <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.45); z-index: 9999; pointer-events: none;"></div>
     
     <!-- Контент поверх шторки -->
-    <div style="position: relative; z-index: 2; width: 100%; text-align: center; padding: 20px;">
+    <div style="position: relative; z-index: 10000; width: 100%; text-align: center; padding: 20px;">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -83,7 +83,7 @@
     </div>
     
     <!-- Стрелка вниз -->
-    <div class="down-arrow floating-arrow" style="position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); z-index: 3;">
+    <div class="down-arrow floating-arrow" style="position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); z-index: 10001;">
         <a href="#invitation"><i class="fa fa-angle-down" style="color: #fff; font-size: clamp(28px, 4vw, 40px);"></i></a>
     </div>
 </section>
